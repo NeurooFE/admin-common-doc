@@ -6,10 +6,10 @@
   * [props属性](模型属性.md#props属性)
 
 * [表格属性](表格属性.md)
-
+  * [columns](表格属性.md#columns)
+  * [toolbars](表格属性.md#toolbars)
+  * [grids](表格属性.md#grids)
 * [编辑器属性](编辑器属性.md)
-
 * [查询器属性](查询器属性.md)
-
 * [formatter](formatter.md)
 
