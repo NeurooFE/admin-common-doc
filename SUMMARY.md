@@ -13,6 +13,8 @@
   * [groups](编辑器属性.md#groups)
   * [editor](编辑器属性.md#editor)
 * [查询器属性](查询器属性.md)
+  * [query](查询器属性.md#query)
+  * [order](查询器属性.md#order)
 * [formatter](formatter.md)
 
 
