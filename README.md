@@ -4,8 +4,17 @@
 
 ```javascript
 import AdminCommon from 'admin-common'
+const TestComponent from '../component/test.vue'
 
-Vue.use(AdminCommon, {store, router, Parse: Vue.prototype.$Parse, config: {title: '测试管理后台'}})
+Vue.use(AdminCommon, {
+  store, 
+  router, 
+  Parse: Vue.prototype.$Parse, 
+  config: {title: '测试管理后台'},
+  component: {
+    test: TestComponent
+  }
+})
 
 new Vue({
   el: '#app',
@@ -18,19 +27,26 @@ new Vue({
 
 ## 初始化配置
 
-| 属性名    | 描述       | 类型     | 必填    |
-| ------ | -------- | ------ | ----- |
-| store  | vuex实例   | Object | true  |
-| router | router实例 | Object | true  |
-| Parse  | Parse实例  | Object | true  |
-| config | 通用后台的配置  | Object | false |
-| plugin | 通用后台的插件  | Object | false |
+| 属性名       | 描述        | 类型     | 必填    |
+| --------- | --------- | ------ | ----- |
+| store     | vuex实例    | Object | true  |
+| router    | router实例  | Object | true  |
+| Parse     | Parse实例   | Object | true  |
+| config    | 通用后台的配置   | Object | false |
+| plugin    | 通用后台的插件   | Object | false |
+| component | 通用后台自定义组件 | Object | false |
 
 ### config配置
 
 | 属性名   | 描述          | 类型     | 默认值  | 必填    |
 | ----- | ----------- | ------ | ---- | ----- |
 | title | 配置头部和登录页的标题 | String | 管理后台 | false |
+
+### component
+
+可以自定义组件，自定义组件支持异步组件。
+
+自定义组件必须为 `vue` 标准组件。具体的自定义组件规则见每个模块的说明。
 
 ## 菜单配置
 
